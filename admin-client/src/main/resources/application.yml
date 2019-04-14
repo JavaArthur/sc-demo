@@ -8,7 +8,10 @@ spring:
         url: http://localhost:7777
         instance:
           prefer-ip: true
-          service-base-url: http://localhost:${server.port}
+        username: chen
+        password: chen
+        enabled: true
+  #          service-base-url: http://localhost:${server.port}
   cloud:
     nacos:
       discovery:
