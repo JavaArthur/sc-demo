@@ -1,0 +1,36 @@
+server:
+  port: 8100
+spring:
+  application:
+    name: consumer
+  boot:
+    admin:
+      client:
+        url: http://localhost:7777
+        instance:
+          prefer-ip: true
+  cloud:
+    nacos:
+      config:
+        server-addr: 127.0.0.1:8848
+        prefix: example
+        file-extension: yaml
+#        ext-config[0]:
+#          data-id: example2.yaml
+#          group: DEFAULT_GROUP
+#          refresh: true
+#        shared-dataids: example3.yaml
+#        refreshable-dataids: example3.yaml
+      discovery:
+        server-addr: 127.0.0.1:8848
+
+#        namespace: 02c8a604-cc9e-4e02-bad3-d2cbfae873a0
+  profiles:
+    active: test
+
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"

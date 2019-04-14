@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: client
+  boot:
+    admin:
+      client:
+        url: http://localhost:7777
+        instance:
+          prefer-ip: true
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: ALWAYS
+

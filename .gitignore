@@ -1,0 +1,11 @@
+# Created by .ignore support plugin (hsz.mobi)
+### Java template
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+/target
+
+
